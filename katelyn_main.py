@@ -16,7 +16,7 @@ def star_mapper_3D(star_name, radius):
 
     distance=1/(parallax/1000)*u.pc
     side_length_cube_pc=1/radius*u.pc
-    side_length_cube_arcsec=(1/distance.value)*1000
+    side_length_cube_arcsec=(1/radius)*1000
     print(parallax, side_length_cube_arcsec)
     
     region= Simbad.query_region(coord.SkyCoord(RA, DEC,
